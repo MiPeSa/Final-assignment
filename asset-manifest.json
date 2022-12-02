@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MiPeSa/Final-assignment.git/static/css/main.8750af50.css",
+    "main.js": "/MiPeSa/Final-assignment.git/static/js/main.757730fb.js",
+    "static/js/787.774a43b7.chunk.js": "/MiPeSa/Final-assignment.git/static/js/787.774a43b7.chunk.js",
+    "index.html": "/MiPeSa/Final-assignment.git/index.html",
+    "main.8750af50.css.map": "/MiPeSa/Final-assignment.git/static/css/main.8750af50.css.map",
+    "main.757730fb.js.map": "/MiPeSa/Final-assignment.git/static/js/main.757730fb.js.map",
+    "787.774a43b7.chunk.js.map": "/MiPeSa/Final-assignment.git/static/js/787.774a43b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8750af50.css",
+    "static/js/main.757730fb.js"
+  ]
+}
