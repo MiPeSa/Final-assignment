@@ -1,10 +1,18 @@
 {
   "name": "lopputyo-ms",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://github.com/MiPeSa/Final-assignment.git",
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/react": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "@mobiscroll/react-lite": "^4.10.9",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
     "@mui/x-date-pickers": "^5.0.9",
@@ -14,12 +22,15 @@
     "ag-grid-community": "^28.2.1",
     "ag-grid-react": "^28.2.1",
     "dayjs": "^1.11.6",
+    "fullcalendar": "^5.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",     
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

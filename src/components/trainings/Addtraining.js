@@ -14,10 +14,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 export default function Addtraining(props) {
 
-    const [customer, setCustomer] = React.useState([]);
-    const [customerName, setcustomerName] = React.useState('');
-    const [open, setOpen] = React.useState(false);
-    const [training, setTraining] = React.useState({
+    const [customer, setCustomer] = useState([]);
+    const [open, setOpen] = useState(false);
+    const [training, setTraining] = useState({
         customer: '', date: (null), duration: '', activity: ''
     })
 

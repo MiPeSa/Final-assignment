@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { AgGridReact } from'ag-grid-react'
 import'ag-grid-community/dist/styles/ag-grid.css'
 import'ag-grid-community/dist/styles/ag-theme-material.css';
@@ -8,8 +8,11 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Editcustomer from "./Editcustomer";
 import Deletecustomer from "./Deletecustomer";
+import { Button } from "@mui/material";
+import Box from '@mui/material/Box';
 
 export default function Customerslist() {
+    const gridRef = useRef();
 
     const [customers, setCustomers] = useState([]);
     const [open, setOpen] = useState(false);
@@ -33,6 +36,18 @@ export default function Customerslist() {
         }
         setOpen(false);
     };
+
+    const onBtnExport = useCallback((params) => {
+        params = {
+            columnKeys: [
+                'fullname',
+                'fulladdress',
+                'email',
+                'phone'
+            ]
+        }
+        gridRef.current.api.exportDataAsCsv(params);
+    }, []);
 
     const action = (
         <React.Fragment>
@@ -139,8 +154,15 @@ export default function Customerslist() {
         <div className="tablecontent">
             <div className="ag-theme-material"
                 style={{height: '90vh', width: '100%', margin: 10}} >
+            <Box textAlign='left'>
             <Addcustomer saveCustomer={saveCustomer} />
+                <Button style={{marginTop: 5,marginLeft: 10, marginBottom: 0}} color="primary" size="medium" variant="contained" onClick={onBtnExport}>
+                    Download CSV export file
+                </Button>
+            </Box>
             <AgGridReact
+                suppressExcelExport={true}
+                ref={gridRef}
                 rowSelection="single"
                 columnDefs={columns}
                 rowData={customers}
