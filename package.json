@@ -1,7 +1,7 @@
 {
   "name": "lopputyo-ms",
   "version": "0.1.0",
-  "homepage": "https://github.com/MiPeSa/Final-assignment.git",
+  "homepage": "https://mipesa.github.io/Final-assignment/",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -23,13 +23,17 @@
     "ag-grid-react": "^28.2.1",
     "dayjs": "^1.11.6",
     "fullcalendar": "^5.11.3",
+    "lodash": "^4.17.21",
+    "lodash.groupby": "^4.6.0",
+    "lodash.sumby": "^4.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "recharts": "^2.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",     
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

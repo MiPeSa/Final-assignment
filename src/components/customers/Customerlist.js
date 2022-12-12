@@ -88,7 +88,7 @@ export default function Customerslist() {
             .catch(err => console.error(err))
             setMessage('Customer details updated');
             handleClick();
-        }
+    }
     
     const deleteCustomer = (link) => {
         fetch(link, {
@@ -147,7 +147,7 @@ export default function Customerslist() {
                 field: 'links.1.href',
                 cellRenderer: row => <Deletecustomer deleteCustomer={deleteCustomer} customer={row.data} />
             },
-        ]
+    ]
 
 
     return (

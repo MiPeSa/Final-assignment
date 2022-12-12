@@ -76,7 +76,7 @@ export default function Traininglist() {
             minValidYear: 2020,
             maxValidYear: 2022,
             inRangeFloatingFilterDateFormat: 'DD.MM.YYYY',
-          };
+        };
 
         const addMinRenderer = function(params) {
             return params.value+' min';
